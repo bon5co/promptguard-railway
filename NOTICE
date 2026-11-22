@@ -1,0 +1,13 @@
+Wrapper code in this repository (app.py, entrypoint.sh, Dockerfile) is Apache-2.0, see LICENSE.
+
+The container image built from it also contains:
+
+- The model protectai/deberta-v3-base-prompt-injection-v2 at commit 90c9989b1a342275dd0d1a95aad283c04e075671,
+  Apache-2.0 per its Hugging Face model card (https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2),
+  (c) Protect AI, fine-tuned from microsoft/deberta-v3-base (MIT). English only; the model card states it does
+  not detect jailbreak attacks.
+- The model Qwen/Qwen3Guard-Gen-0.6B at commit fada3b2f655b89601929198343c94cd2f64d93cc, Apache-2.0 per its
+  Hugging Face model card (https://huggingface.co/Qwen/Qwen3Guard-Gen-0.6B), (c) Alibaba Cloud / Qwen team,
+  built on Qwen/Qwen3-0.6B. The weight files are fetched at build time and verified by sha256.
+- PyTorch (BSD-3-Clause) and Hugging Face transformers (Apache-2.0), and the other Python dependencies pinned
+  in requirements.txt, each under its own licence.
